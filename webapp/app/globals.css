@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #f3f4ff;
+  --foreground: #091e42;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Paleta oficial ADIPA — ver BRIEF.md / lineamientos de UI. */
+  --color-adipa-bg: #f3f4ff;
+  --color-adipa-ink: #091e42;
+  --color-adipa-muted: #6d6d6d;
+  --color-adipa-purple: #704efd;
+  --color-adipa-cyan: #2cb7ff;
+  --color-adipa-danger: #ff1f17;
+  --color-adipa-border: #d9dde8;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Degradado de marca ADIPA: celeste -> morado a -45deg (header, botón Generar, barra de zoom). */
+.adipa-gradient {
+  background-image: linear-gradient(-45deg, #2cb7ff, #704efd);
+}
+
+/* Slider de zoom del recorte de fotografía (BRIEF.md §4.1 "Fotografía"). Solo estilo visual — la
+   lógica de arrastre/zoom vive en PhotoCropper.tsx y no se toca acá. */
+.adipa-zoom-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  border: 0.5px solid #b7b7b7;
+  background: #ffffff;
+  outline: none;
+}
+.adipa-zoom-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: transparent;
+}
+.adipa-zoom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2cb7ff;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px #b7b7b7;
+  margin-top: -5px;
+  cursor: pointer;
+}
+.adipa-zoom-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: transparent;
+  border: 0.5px solid #b7b7b7;
+}
+.adipa-zoom-slider::-moz-range-progress {
+  height: 6px;
+  border-radius: 999px;
+  background-image: linear-gradient(-45deg, #2cb7ff, #704efd);
+}
+.adipa-zoom-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2cb7ff;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+}

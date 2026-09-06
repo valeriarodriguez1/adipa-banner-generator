@@ -1,0 +1,31 @@
+# Dependencias instaladas
+node_modules/
+webapp/node_modules/
+
+# Builds / caché de Next.js
+.next/
+webapp/.next/
+out/
+webapp/out/
+
+# Vínculo local al proyecto de Vercel (project.json con IDs de org/proyecto)
+.vercel/
+webapp/.vercel/
+
+# Caché incremental de TypeScript
+*.tsbuildinfo
+
+# Variables de entorno — nunca deben commitearse credenciales o config local
+.env
+.env.*
+webapp/.env
+webapp/.env.*
+
+# Sistema operativo / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Config local de Claude Code con rutas absolutas de esta máquina.
+# webapp/.claude/launch.json SÍ se versiona (es portable, usa "npm run dev" relativo).
+/.claude/

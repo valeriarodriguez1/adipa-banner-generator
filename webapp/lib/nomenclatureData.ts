@@ -96,7 +96,7 @@ const sinPrefijo = (): CountryAbbrev => ({ kind: 'sinPrefijo' });
 export const TITULOS_PROFESIONALES: TituloProfesionalEntry[] = [
   { id: 'psicologia', label: 'Psicología', chile: single('Ps.'), colombia: single('Psic.'), mexico: single('Lic.') },
   { id: 'psiquiatria', label: 'Psiquiatría', chile: gender('Dra.', 'Dr.'), colombia: gender('Dra.', 'Dr.'), mexico: gender('Dra.', 'Dr.') },
-  { id: 'psicopedagogia', label: 'Psicopedagogía', chile: single('Psicp.'), colombia: ambiguous(), mexico: single('Lic.') },
+  { id: 'psicopedagogia', label: 'Psicopedagogía', chile: single('Psicp.'), colombia: single('Psicop.'), mexico: single('Lic.') },
   { id: 'neuropsicologia', label: 'Neuropsicología', chile: single('Ps.'), colombia: ambiguous(), mexico: single('Lic.') },
   { id: 'psicoanalista', label: 'Psicoanalista', chile: single('Ps.'), colombia: single('Ps.'), mexico: single('Lic.') },
   { id: 'psicoterapeuta', label: 'Psicoterapeuta', chile: single('Ps.'), colombia: single('Ps.'), mexico: single('Lic.') },

@@ -123,7 +123,7 @@ Esto **no es una funcionalidad fuera de alcance** — es información que falta 
 
 - **Abreviatura oficial única por grado o profesión y país, para los casos con más de una forma no relacionada con género** — aplica tanto a grados académicos como a títulos profesionales:
   - **Grados académicos** (`Grados Academicos por pais.pdf`): ya no quedan casos pendientes en esta tabla — Magíster/Master en Colombia fue confirmado por ADIPA como "Mag." (ver historial de decisiones) y se retiró de esta lista.
-  - **Títulos profesionales** (`Titulos profesionales.pdf`): ej. Terapia Ocupacional en México — "Lic." vs "TO."; lista completa marcada con ⚠ en el anexo, sección 8.2. Psicología en Colombia ya fue confirmada por ADIPA como "Psic." (ver historial de decisiones) y se retiró de esta lista.
+  - **Títulos profesionales** (`Titulos profesionales.pdf`): ej. Terapia Ocupacional en México — "Lic." vs "TO."; lista completa marcada con ⚠ en el anexo, sección 8.2. Psicología en Colombia ("Psic.") y Psicopedagogía en Colombia ("Psicop.") ya fueron confirmadas por ADIPA (ver historial de decisiones) y se retiraron de esta lista.
   
   En ambos documentos fuente se listan las alternativas sin indicar un criterio de elección.
 - **Hasta que ADIPA entregue esa tabla definitiva:** el sistema debe tratar cada una de estas combinaciones (profesión + país) como **nomenclatura no definida** — exactamente el mismo mecanismo del aviso descrito en [Reglas de negocio → Género](#5-reglas-de-negocio) — y bloquear solo el país afectado en la pantalla Información, sin generar el banner y sin asumir ni la primera opción de la lista ni ningún otro criterio implícito.
@@ -164,7 +164,7 @@ Leyenda: **G** = varía por género (Fem./Masc., el material fuente no siempre d
 |---|---|---|---|---|
 | 1 | Psicología | Ps. | Psic. (confirmado por ADIPA) | Lic. |
 | 2 | Psiquiatría | Dr. / Dra. (G) | Dr. / Dra. (G) | Dr. / Dra. (G) |
-| 3 | Psicopedagogía | Psicp. | Pscp. / Lic. ⚠ | Lic. |
+| 3 | Psicopedagogía | Psicp. | Psicop. (confirmado por ADIPA) | Lic. |
 | 4 | Neuropsicología | Ps. (base) | Ps. / Psic. (base) ⚠ | Lic. (base) |
 | 5 | Psicoanalista | Ps. (base) | Ps. (base) | Lic. (base) |
 | 6 | Psicoterapeuta | Ps. (base) | Ps. (base) | Lic. (base) |
@@ -216,6 +216,8 @@ Para trazabilidad — estas fueron las preguntas abiertas detectadas al analizar
 12. **Corrección del punto 11 — Magíster/Master en Colombia NO es "Mgtr."** — el dato del punto anterior era incorrecto: "Mgtr." corresponde a información de **Argentina**, país que no forma parte del alcance de este MVP (ver [Fuera de alcance](#7-fuera-de-alcance): solo Chile, México y Colombia). **Resuelto correctamente:** la abreviatura oficial de Magíster/Master en Colombia es **"Mag."**, sin variación por género (igual patrón neutro que "Mg." en Chile). Se corrigió la tabla de grados académicos (sección 8.1), la sección 6 y la lógica de nomenclatura — Colombia con grado Magíster/Master usa "Mag." y no queda bloqueada. No se agregó Argentina al sistema ni a ninguna tabla. Las demás abreviaturas dobles (títulos profesionales) siguen pendientes sin cambios.
 13. **Mayúsculas en la línea de nombre del banner** — ajuste visual solicitado sobre el template de referencia. **Resuelto:** la línea de nomenclatura + nombre del docente se renderiza en MAYÚSCULAS únicamente en el banner final (canvas de exportación); el dato ingresado por el diseñador y todo lo mostrado en la interfaz (formulario, precarga de Edición manual) conservan su capitalización original — no se transforma ni se guarda en mayúsculas en ningún otro lugar.
 14. **Resumen docente — límite y recomendación actualizados tras probar casos reales** (docentes con trayectorias más extensas) y revisar el espacio disponible del template. **Reemplaza** el límite duro de 350 caracteres y la recomendación de 6–7 viñetas del punto 6. **Resuelto:** el límite duro pasa a **550 caracteres** contando espacios (sigue siendo el único límite duro — la cantidad de viñetas nunca bloquea por sí sola); la recomendación de viñetas pasa a **6–10**. El render del banner ahora aprovecha primero el espacio vertical disponible del área de resumen (interlineado más compacto) y solo si aun así no alcanza reduce levemente el tamaño de la tipografía, para que un resumen cercano a 550 caracteres siempre quede dentro de su caja sin invadir otros elementos del template.
+
+15. **Psicopedagogía en Colombia** — era una de las abreviaturas dobles marcadas ⚠ en títulos profesionales ("Pscp." vs "Lic."), pendiente de validación con ADIPA. **Resuelto:** ADIPA confirmó que la abreviatura oficial es **"Psicop."**. Se actualizó la tabla de títulos profesionales (sección 8.2) y dejó de tratarse como nomenclatura no definida — ahora Chile/Colombia/México resuelven Psicopedagogía sin bloqueo. Las demás abreviaturas dobles siguen pendientes sin cambios.
 
 ## 10. Retrospectiva
 
